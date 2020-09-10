@@ -1,0 +1,15 @@
+body {
+  background-color: lightyellow;
+  align-items: center;
+}
+
+.content {
+  max-width: 700px;
+  margin: auto;
+  padding: inherit;
+}
+.data{
+  max-width: 300px;
+  margin:auto;
+  padding: 10px;
+}
