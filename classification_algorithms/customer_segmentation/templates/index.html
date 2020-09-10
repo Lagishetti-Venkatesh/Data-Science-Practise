@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Classification</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="content">
+
+    <img src={{url_for('static', filename='customer_segmentation.png')}} height="350", width="700"/>
+	   <h1>Classifying the customers into one of the 5 classes</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('predict')}}" method="post">
+      <div class='data'>
+        <h3> Enter the Data in the below form</h3>
+        <input type="text" name="age" placeholder="Age" required="required" />
+        <input type="text" name="annual_income_in_k$" placeholder="Annual_income_in_k$" required="required" />
+        <input type="text" name="spending_score" placeholder="Spending_score" required="required" />
+
+        <h4> Choose the Gender</h4>
+        <input type="radio" id="male" name="gender" value="male" placeholder="Gender" required="required"/>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" placeholder="Gender" required="required"/>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other" placeholder="Gender" required="required" />
+        <label for="other">Other</label>
+        <ul>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </ul>
+
+
+      </div>
+      <h2>{{ prediction_text }}</h2>
+
+    </form>
+
+   <br>
+   <br>
+
+
+ </div>
+
+</body>
+</html>
