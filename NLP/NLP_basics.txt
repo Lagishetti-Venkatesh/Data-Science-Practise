@@ -1,4 +1,0 @@
-Concepets covered are :
-1. Text Pre-processing 1 ==> Tokenization, lowering the text data, removing the unwanted characters using regex.
-2. Text Pre-processing 2 ==> Stemming , Lemmatization, Removing stopwords, Parts of Speech Tagging, Named Entity Rocognition.
-3. Text To Vector ==> Word Embedding, One Hot encoding, Bag of Words(Binary and normal), Word2vec(C-bow, Skip-gram), Average word2vec.
